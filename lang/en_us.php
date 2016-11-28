@@ -764,6 +764,7 @@ class en_us extends Language
 		// End Day representations
 
 		// Email Subjects
+		$strings['ReservationAvailableSubject'] = 'A Resource You Requested Has Become Available';
 		$strings['ReservationApprovedSubject'] = 'Your Reservation Has Been Approved';
 		$strings['ReservationCreatedSubject'] = 'Your Reservation Was Created';
 		$strings['ReservationUpdatedSubject'] = 'Your Reservation Was Updated';

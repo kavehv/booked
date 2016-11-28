@@ -63,7 +63,7 @@ try
             }
         }
 
-        if (!$conflicts || $r->StartDate()->LessThanOrEqual(Date::Now()))
+        if (!$conflicts && $r->StartDate()->LessThanOrEqual(Date::Now()))
         {
             $user = $userRepository->LoadById($r->UserId());
             $resource = $resourceRepository->LoadById($r->ResourceId());
