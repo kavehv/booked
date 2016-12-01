@@ -19,6 +19,11 @@ class ReservationBasicInfoRule implements IReservationValidationRule
 
 	public function Validate($reservationSeries, $retryParameters)
 	{
+		$reservationTitle = $reservationSeries->Title();
+		if (empty($reservationTitle)) {
+			return new ReservationRuleResult(false, Resources::GetInstance()->GetString('NoTitleLabel'));
+		}
+
 		$userId = $reservationSeries->UserId();
 		$resourceId = $reservationSeries->ResourceId();
 
